@@ -10,7 +10,9 @@ while ($pecah=$ambil->fetch_assoc()) {
 }
 ?>
 
-<div class="card shadow bg-white">
+<a href="index.php?halaman=tambah_produk" class="btn btn-sm btn-success">Tambah</a>
+
+<div class="card shadow bg-white mt-3">
     <div class="card-body">
         <table class="table table-bordered table-hover table-striped" id="tables">
             <thead>

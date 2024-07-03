@@ -139,18 +139,28 @@ include '../koneksi/koneksi.php';
                         //HALAMAN KATEGORI
                         if ($_GET['halaman'] == 'kategori') {
                             include 'kategori.php';
-                            //HALAMN PRODUK
-                        } elseif ($_GET['halaman'] == 'produk') {
+                        } 
+                         //HALAMAN TAMBAH kategori
+                        elseif($_GET['halaman'] == 'tambah_kategori') {
+                            include 'tambah/tambah_kategori.php';
+                        }
+                         //HALAMN PRODUK
+                        elseif ($_GET['halaman'] == 'produk') {
                             include 'produk.php';
-                            //HALAMAN PEMBELIAN
-                        } elseif ($_GET['halaman'] == 'pembelian') {
+                            
+                        }   //HALAMN tambah produk
+                        elseif($_GET['halaman'] == 'tambah_produk') {
+                            include 'tambah/tambah_produk.php';
+                        }
+                        //HALAMAN PEMBELIAN
+                         elseif ($_GET['halaman'] == 'pembelian') {
                             include 'pembelian.php';
                             //HALAMAN USERS
                         }
-                        elseif($_GET['halaman']=="detail_pembelian"){
+                         elseif ($_GET['halaman'] == "detail_pembelian") {
                             include 'detail/detail_pembelian.php';
                         }
-                        elseif ($_GET['halaman'] == 'users') {
+                         elseif ($_GET['halaman'] == 'users') {
                             include 'users.php';
                         }
                     } else {
@@ -221,6 +231,13 @@ include '../koneksi/koneksi.php';
 
     <!-- Page level custom scripts -->
     <script src="../assets/js/demo/datatables-demo.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn-tambah").on("click", function(){
+               $(".input-foto").append("<input type='file' name='foto[]' class='form-control'>");
+            })
+        })
+    </script>
 
 </body>
 
